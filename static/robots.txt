@@ -1,5 +1,4 @@
 Sitemap: https://geeksblabla.com/sitemap.xml
 
 User-agent: *
-Disallow: /thanks/
 

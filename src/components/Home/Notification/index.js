@@ -30,14 +30,14 @@ export default () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Facebook height={38} alt="Geeksblabla Facebook Page " />
+            <Facebook height={38} alt="Geeksvideo Facebook Page " />
           </a>
           <a
             href="http://twitter.com/geeksblabla"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twitter height={50} alt="Geeksblabla Twitter Account " />
+            <Twitter height={50} alt="Geeksvideo Twitter Account " />
           </a>
           <a
             href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"

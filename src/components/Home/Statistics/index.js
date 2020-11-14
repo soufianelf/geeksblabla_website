@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import EpisodesIcon from "assets/episodes.svg"
-import EpisodesIconLight from "assets/episodes_light.svg"
+import VideosIcon from "assets/videos.svg"
+import VideosIconLight from "assets/videos_light.svg"
 import MinutesIcon from "assets/minutes.svg"
 import MinutesIconLight from "assets/minutes_light.svg"
 import GuestIcon from "assets/guest.svg"
@@ -32,7 +32,7 @@ const query = graphql`
 export default () => {
   const { dark } = useTheme()
   const data = useStaticQuery(query)
-  const episodes = data.allMdx.edges
+  const videos = data.allMdx.edges
 
   const backGroundShape = {
     backgroundImage: `url(${dark ? backGroundDark : backGroundLight})`,
@@ -47,23 +47,23 @@ export default () => {
     >
       <div className="container">
         <div className="item" style={backGroundShape}>
-          {dark ? <EpisodesIcon /> : <EpisodesIconLight />}
+          {dark ? <VideosIcon /> : <VideosIconLight />}
           <div>
-            <h1> {episodes.length}+ </h1>
-            <p>Episodes</p>
+            <h1> {videos.length}+ </h1>
+            <p>Videos</p>
           </div>
         </div>
         <div className="item" style={backGroundShape}>
           {dark ? <MinutesIcon /> : <MinutesIconLight />}
           <div>
-            <h1>{episodes.length * 93}+ </h1>
-            <p>Minutes of Blabla</p>
+            <h1>{videos.length * 93}+ </h1>
+            <p>Minutes</p>
           </div>
         </div>
         <div className="item" style={backGroundShape}>
           {dark ? <GuestIcon /> : <GuestIconLight />}
           <div>
-            <h1> {parseInt(episodes.length * 1.5)}+ </h1>
+            <h1> {parseInt(videos.length * 1.5)}+ </h1>
             <p>Guests</p>
           </div>
         </div>

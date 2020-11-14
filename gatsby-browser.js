@@ -28,8 +28,8 @@ export const shouldUpdateScroll = ({
     return true
   }
   if (
-    prevPathName.indexOf("blabla") !== -1 &&
-    pathname.indexOf("blabla") !== -1
+    prevPathName.indexOf("video") !== -1 &&
+    pathname.indexOf("video") !== -1
   ) {
     return false
   }

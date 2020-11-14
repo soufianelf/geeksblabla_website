@@ -9,7 +9,7 @@ export default React.memo(
     defaultTitle,
     description,
     image,
-    isEpisode,
+    isVideo,
     organization,
     title,
     url,
@@ -24,7 +24,7 @@ export default React.memo(
       },
     ]
 
-    const schema = isEpisode
+    const schema = isVideo
       ? [
           ...baseSchema,
           {

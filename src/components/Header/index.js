@@ -1,26 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import MobileNav from "./MobileNav"
 import Links from "./Links"
-import Logo from "assets/logo.svg"
 import "./index.scss"
 
-//const logo = require("../../images/logo.png")
+const channelQuery = graphql`
+  {
+    channel {
+      logoImage
+    }
+  }
+`
+const Header = () => {
+  const data = useStaticQuery(channelQuery)
+  const channel = data.channel
 
-//const GeeksBlablaLogo = () => <Image />
-
-const Header = () => (
-  <header className="container header">
-    <div className="header-container">
-      <Link to="/">
-        <Logo className="logo" alt="Logo" />
-      </Link>
-      <div className="menu">
-        <Links />
+  return (
+    <header className="container header">
+      <div className="header-container">
+        <Link to="/">
+          <img src={channel.logoImage} className="logo" alt="Logo" />
+        </Link>
+        <div className="menu">
+          <Links />
+        </div>
+        <MobileNav />
       </div>
-      <MobileNav />
-    </div>
-  </header>
-)
+    </header>
+  )
+}
 
 export default Header

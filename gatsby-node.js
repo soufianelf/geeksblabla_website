@@ -26,7 +26,7 @@ const createPosts = (createPage, createRedirect, edges) => {
 
     createPage({
       path: pagePath,
-      component: path.resolve(`./src/templates/blabla.js`),
+      component: path.resolve(`./src/templates/video.js`),
       context: {
         id: node.id,
         prev,
@@ -37,32 +37,32 @@ const createPosts = (createPage, createRedirect, edges) => {
 }
 
 /**
- * Inspired from the createPosts method, the below method creates pages for each category.
- * Furthermore, it also creates episode pages under each category i.e: `/${category}/${episodeTitle}/`
+ * Inspired from the createPosts method, the below method creates pages for each playlist.
+ * Furthermore, it also creates video pages under each playlist i.e: `/${playlist}/${videoTitle}/`
  */
-const createCategories = (createPage, group) => {
-  group.forEach(({ category, edges }) => {
-    const pagePath = `/${_.kebabCase(category)}`
+const createPlaylists = (createPage, group) => {
+  group.forEach(({ playlist, edges }) => {
+    const pagePath = `/${_.kebabCase(playlist)}`
 
     createPage({
       path: pagePath,
-      component: path.resolve(`./src/templates/category.js`),
+      component: path.resolve(`./src/templates/playlist.js`),
       context: {
-        category,
+        playlist,
         slug: pagePath,
       },
     })
 
     edges.forEach(({ node }) => {
-      const episodeUnderCategoryPath = `${pagePath}/${_.kebabCase(
+      const videoUnderPlaylistPath = `${pagePath}/${_.kebabCase(
         node.fields.title
       )}`
       createPage({
-        path: episodeUnderCategoryPath,
-        component: path.resolve(`./src/templates/category-blabla.js`),
+        path: videoUnderPlaylistPath,
+        component: path.resolve(`./src/templates/playlist-video.js`),
         context: {
           id: node.id,
-          category,
+          playlist,
         },
       })
     })
@@ -73,7 +73,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const result = await graphql(
     `
       {
-        episodes: allMdx(
+        videos: allMdx(
           filter: { frontmatter: { published: { ne: false } } }
           sort: { order: DESC, fields: [frontmatter___date] }
         ) {
@@ -96,9 +96,9 @@ exports.createPages = async ({ actions, graphql }) => {
             }
           }
         }
-        categories: allMdx {
-          group(field: frontmatter___category) {
-            category: fieldValue
+        playlists: allMdx {
+          group(field: frontmatter___playlist) {
+            playlist: fieldValue
             edges {
               node {
                 id
@@ -128,13 +128,13 @@ exports.createPages = async ({ actions, graphql }) => {
   }
 
   const {
-    episodes: { edges },
-    categories: { group },
+    videos: { edges },
+    playlists: { group },
   } = result.data
   const { createRedirect, createPage } = actions
 
   createPosts(createPage, createRedirect, edges)
-  createCategories(createPage, group)
+  createPlaylists(createPage, group)
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -144,7 +144,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const parent = getNode(node.parent)
     const titleSlugged = _.join(_.drop(parent.name.split("-"), 3), "-")
 
-    const slug = "blablas/" + _.kebabCase(node.frontmatter.title)
+    const slug = "channel/videos/" + _.kebabCase(node.frontmatter.title)
 
     createNodeField({
       name: "id",
@@ -187,9 +187,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: node.frontmatter.tags || [],
     })
     createNodeField({
-      name: "category",
+      name: "playlist",
       node,
-      value: node.frontmatter.category || "",
+      value: node.frontmatter.playlist || "",
     })
     createNodeField({
       name: "featured",
@@ -200,14 +200,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node.fileAbsolutePath.substring(
         node.fileAbsolutePath.indexOf(
           "/",
-          node.fileAbsolutePath.indexOf("blablas")
+          node.fileAbsolutePath.indexOf("videos")
         )
       ) || ""
 
     createNodeField({
       name: "repoLink",
       node,
-      value: `https://github.com/DevC-Casa/geeksblabla.com/tree/master/blablas${path}`,
+      value: `https://github.com/DevC-Casa/geeksblabla.com/tree/master/videos${path}`,
     })
     createNodeField({
       name: "url",
@@ -268,27 +268,16 @@ exports.sourceNodes = async ({
   createNodeId,
   createContentDigest,
 }) => {
-  let data = JSON.parse(fs.readFileSync("./.all-contributorsrc", "utf-8"))
+  let data = JSON.parse(fs.readFileSync("./channel/channel.json", "utf-8"))
 
-  data.contributors.forEach((contributor) => {
-    const name = contributor.name.replace(/\s+/g, " ").trim().split(" ")
-    const node = {
-      firstName: name[0],
-      lastName:
-        name.length === 3
-          ? `${name[1]} ${name[2]}`
-          : name.length === 2
-          ? name[1]
-          : "",
-      ...contributor,
-      id: createNodeId(`contributor-${contributor.login}`),
-      internal: {
-        type: "Contributor",
-        contentDigest: createContentDigest(contributor),
-      },
-    }
+  const node = {
+    ...data,
+    id: createNodeId(`contributor-${data.name}`),
+    internal: {
+      type: "channel",
+      contentDigest: createContentDigest(data),
+    },
+  }
 
-    // Create the actual data node
-    actions.createNode(node)
-  })
+  actions.createNode(node)
 }
