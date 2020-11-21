@@ -24,12 +24,21 @@ export default ({ style }) => (
         </span>{" "}
         By{" "}
         <a
-          href="https://www.facebook.com/groups/DevC.Casablanca/"
+          href="https://github.com/soufianelf/geeksblabla_website/"
           target="_blank"
           rel="noopener noreferrer"
         >
           {" "}
           DevC Casa Team{" "}
+        </a>{" "}
+        tweaked by{" "}
+        <a
+          href="https://github.com/soufianelf/geeksblabla_website/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Fanda{" "}
         </a>{" "}
         using
       </p>
@@ -39,11 +48,14 @@ export default ({ style }) => (
       </p>
       <p>
         Sourced on{" "}
-        <a href="https://github.com/DevC-Casa/geeksblabla.com" rel="noopener">
+        <a
+          href="https://github.com/soufianelf/geeksblabla_website"
+          rel="noopener"
+        >
           GitHub
         </a>
       </p>
-      <p>© DevC Casablanca 2018 - {new Date().getFullYear()}</p>
+      <p>© Youtapps {new Date().getFullYear()}</p>
     </div>
   </div>
 )
