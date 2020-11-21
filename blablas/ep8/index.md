@@ -6,7 +6,7 @@ title: "Malware analysis and forensics"
 tags: ["cybersecurity", "security"]
 category: "dev"
 isNext: false
-video: "2003419829718683"
+video: "XFGc-P2Ig9w"
 published: true
 audio:
 ---

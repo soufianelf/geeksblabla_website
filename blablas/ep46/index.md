@@ -6,7 +6,7 @@ title: "Mobile Development"
 tags: ["android", "IOS", "mobile dev", "react native", "flutter"]
 category: "dev"
 isNext: false
-video: "272185967229889"
+video: "GFlWbEHmi4Y"
 published: true
 featured: false
 url: ""

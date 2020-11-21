@@ -6,7 +6,7 @@ title: "MSS with Mouhsine Lakhdissi"
 tags: ["MSS", "entrepreneurship"]
 category: "MSS"
 isNext: false
-video: "530406154307944"
+video: "QJw9P_oDQ5o"
 published: true
 featured: false
 url: ""

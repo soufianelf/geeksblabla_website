@@ -6,7 +6,7 @@ title: "Competitive programming, how to become good at!"
 tags: ["competitive programming"]
 category: "dev"
 isNext: false
-video: "2465296773530984"
+video: "jU12lUQMfSQ"
 published: true
 url:
 audio:

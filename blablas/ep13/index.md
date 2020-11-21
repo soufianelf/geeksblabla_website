@@ -6,7 +6,7 @@ title: "Open source licenses & standards"
 tags: ["open source"]
 category: "dev"
 isNext: false
-video: "2323086011085395"
+video: "PHqAbG-Wgkg"
 published: true
 audio:
 ---

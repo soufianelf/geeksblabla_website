@@ -6,7 +6,7 @@ title: "MSS with Meriam Kharbat and Ouafae Aamer"
 tags: ["MSS", "entrepreneurship", "software engineering"]
 category: "MSS"
 isNext: false
-video: "864192424101038"
+video: "QCCH7r9CB1g"
 published: true
 featured: false
 url: ""

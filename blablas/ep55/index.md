@@ -7,7 +7,7 @@ tags: ["open source", "dev"]
 category: "dev"
 isNext: false
 published: true
-video: "776838066222971"
+video: "A6mR8LdPLdQ"
 url:
 podcastUrl: https://www.facebook.com/geeksblabla/videos/776838066222971
 audio:

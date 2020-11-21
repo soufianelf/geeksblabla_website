@@ -6,7 +6,7 @@ title: "Ask Me Anything #2"
 tags: ["AMA", "DevC"]
 category: "AMA"
 isNext: false
-video: "247576546525955"
+video: "FizzGMnYwX0"
 published: true
 featured: false
 url: ""

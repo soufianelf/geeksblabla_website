@@ -6,7 +6,7 @@ title: "MSS with Omar Guendeli"
 tags: ["self-taught", "game dev", "MSS"]
 category: "MSS"
 isNext: false
-video: "1135171186849770"
+video: "DFaRndHwuFY"
 published: true
 featured: false
 url: ""

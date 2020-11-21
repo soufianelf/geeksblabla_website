@@ -6,7 +6,7 @@ title: "Back to school, Computer Science Edition!"
 tags: ["school", "career"]
 category: "career"
 isNext: false
-video: "2573269702733690"
+video: "8UKh2ZQQg3o"
 published: true
 url:
 audio:

@@ -6,7 +6,7 @@ title: "Web Dev JS frameworks, Best practices"
 tags: ["web", "JS", "backend", "frontend"]
 category: "dev"
 isNext: false
-video: "2144076882491332"
+video: "y8mbKtOmNrg"
 published: true
 audio:
 ---

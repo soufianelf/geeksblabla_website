@@ -6,7 +6,7 @@ title: "Open Source with Yassine Elouafi"
 tags: ["open source", "dev", "react", "web", "frontend"]
 category: "dev"
 isNext: false
-video: "2254365704624093"
+video: "i75VSwgRD1k"
 published: true
 audio: https://d3ctxlq1ktw2nl.cloudfront.net/production/2019-11-8/37064067-48000-2-7061c427555f3.m4a
 ---

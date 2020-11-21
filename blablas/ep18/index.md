@@ -6,7 +6,7 @@ title: "GeeksBlabla MSS With Google Engineer Sghiouar Abdelfettah"
 tags: ["MSS", "career"]
 category: "MSS"
 isNext: false
-video: "2417671194960209"
+video: "tu29LZacZSA"
 published: true
 url:
 audio:
