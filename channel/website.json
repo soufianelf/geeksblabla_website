@@ -1,0 +1,38 @@
+{
+  "pathPrefix": "/",
+  "siteTitle": "🎙👨🏻‍💻Geeksblabla 👨🏻‍💻🎙| Hottest technology trends, In Darija!  ",
+  "siteTitleAlt": "🎙👨🏻‍💻Geeksblabla 👨🏻‍💻🎙| Hottest technology trends, In Darija! ",
+  "siteUrl": "https://geeksblabla.com",
+  "siteLanguage": "en",
+  "siteLogo": "images/logo.png",
+  "banner": "images/banner.png",
+  "siteDescription": "🎙👨🏻‍💻Geeksblabla 👨🏻‍💻🎙| GeeksBlaBla is a community initiative, to discuss, highlight and share the latest IT topics in Moroccan Darija.",
+  "organization": "DevC Casablanca",
+  "author": "DevC Casablanca",
+  "ogSiteName": "🎙👨🏻‍💻 Geeksblabla 👨🏻‍💻🎙",
+  "ogLanguage": "en_US",
+  "googleAnalyticsID": "",
+  "themeColor": "#5348FF",
+  "backgroundColor": "#2b2e3c",
+  "minibio": "DevC Casablanca",
+  "keywords": ["DevC_Casa", "geeksblabla", "Podcast"],
+  "RSSTitle": "Geeksblabla RSS Feed",
+  "name": "Geeksblabla Website",
+  "short_name": "Geeksblabla",
+  "start_url": "/",
+  "background_color": "#663399",
+  "theme_color": "#663399",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
