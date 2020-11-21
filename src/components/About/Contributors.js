@@ -4,30 +4,31 @@ import patternDark from "assets/patterns/1.back.svg"
 import patternLight from "assets/patterns/4.back.svg"
 import { useTheme } from "../Theme/ThemeContext"
 
-const contributorsQuery = graphql`
-  {
-    allContributor {
-      edges {
-        node {
-          id
-          login
-          name
-          profile
-          avatar_url
-          contributions
-          firstName
-          lastName
-        }
-      }
-    }
-  }
-`
+// const contributorsQuery = graphql`
+//   {
+//     allContributor {
+//       edges {
+//         node {
+//           id
+//           login
+//           name
+//           profile
+//           avatar_url
+//           contributions
+//           firstName
+//           lastName
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default () => {
   const { dark } = useTheme()
 
-  const data = useStaticQuery(contributorsQuery)
-  const contributors = data.allContributor.edges
+  // const data = useStaticQuery(contributorsQuery)
+  // const contributors = data.allContributor.edges
+  const contributors = []
   return (
     <div
       className="contributors"
