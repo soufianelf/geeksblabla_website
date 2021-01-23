@@ -268,27 +268,45 @@ exports.sourceNodes = async ({
   createNodeId,
   createContentDigest,
 }) => {
-  let data = JSON.parse(fs.readFileSync("./.all-contributorsrc", "utf-8"))
+  let data = JSON.parse(fs.readFileSync("./channel/channel.json", "utf-8"))
 
-  data.contributors.forEach((contributor) => {
-    const name = contributor.name.replace(/\s+/g, " ").trim().split(" ")
-    const node = {
-      firstName: name[0],
-      lastName:
-        name.length === 3
-          ? `${name[1]} ${name[2]}`
-          : name.length === 2
-          ? name[1]
-          : "",
-      ...contributor,
-      id: createNodeId(`contributor-${contributor.login}`),
-      internal: {
-        type: "Contributor",
-        contentDigest: createContentDigest(contributor),
-      },
-    }
+  const node = {
+    ...data,
+    id: createNodeId(`channel`),
+    internal: {
+      type: "channel",
+      contentDigest: createContentDigest(data),
+    },
+  }
 
-    // Create the actual data node
-    actions.createNode(node)
-  })
+  actions.createNode(node)
 }
+// exports.sourceNodes = async ({
+//   actions,
+//   createNodeId,
+//   createContentDigest,
+// }) => {
+//   let data = JSON.parse(fs.readFileSync("./.all-contributorsrc", "utf-8"))
+
+//   data.contributors.forEach((contributor) => {
+//     const name = contributor.name.replace(/\s+/g, " ").trim().split(" ")
+//     const node = {
+//       firstName: name[0],
+//       lastName:
+//         name.length === 3
+//           ? `${name[1]} ${name[2]}`
+//           : name.length === 2
+//           ? name[1]
+//           : "",
+//       ...contributor,
+//       id: createNodeId(`contributor-${contributor.login}`),
+//       internal: {
+//         type: "Contributor",
+//         contentDigest: createContentDigest(contributor),
+//       },
+//     }
+
+//     // Create the actual data node
+//     actions.createNode(node)
+//   })
+// }

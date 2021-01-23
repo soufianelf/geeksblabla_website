@@ -6,7 +6,7 @@ title: "Self-Taught Developers"
 tags: ["self-taught", "software engineering", "career"]
 category: "career"
 isNext: false
-video: "2971727423053675"
+video: "EOnbBm31kiA"
 published: true
 featured: false
 url: ""

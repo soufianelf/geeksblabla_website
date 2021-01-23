@@ -3,6 +3,7 @@ import { ModeProvider } from "./src/components/Mode/ModeContext"
 import { ThemeProvider } from "./src/components/Theme/ThemeContext"
 import "./src/styles/common.scss"
 
+document.body.className = "light"
 // set Mode Provider
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider>

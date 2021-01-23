@@ -1,8 +1,8 @@
 import React from "react"
 import { navigate, useStaticQuery, graphql } from "gatsby"
-import { useTheme } from "../../Theme/ThemeContext"
-import patternLight from "assets/patterns/4.back.svg"
-import patternDark from "assets/patterns/1.back.svg"
+// import { useTheme } from "../../Theme/ThemeContext"
+// import patternLight from "assets/patterns/4.back.svg"
+// import patternDark from "assets/patterns/1.back.svg"
 import "./index.scss"
 
 const FEATURED_EPISODES = graphql`
@@ -33,7 +33,7 @@ const colors = [
 ]
 
 export default React.memo(() => {
-  const { dark } = useTheme()
+  // const { dark } = useTheme()
 
   const {
     allMdx: { edges },
@@ -41,9 +41,9 @@ export default React.memo(() => {
   return (
     <div
       className="top-episodes"
-      style={{
-        backgroundImage: `url(${dark ? patternDark : patternLight})`,
-      }}
+      // style={{
+      //   backgroundImage: `url(${dark ? patternDark : patternLight})`,
+      // }}
     >
       <div className="container">
         <h2>Top episodes</h2>

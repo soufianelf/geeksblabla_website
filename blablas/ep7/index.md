@@ -6,7 +6,7 @@ title: "Métier de développeur"
 tags: ["dev", "career"]
 category: "career"
 isNext: false
-video: "2261166440782375"
+video: "1luq94KV-xM"
 published: true
 audio:
 ---

@@ -2,9 +2,9 @@
 import React from "react"
 import ThemeToggle from "components/Theme/ThemeToggle"
 import { Link } from "gatsby"
-import Spotify from "assets/spotify.svg"
-import ApplePodcast from "assets/apple-podcast.svg"
-import GooglePodcast from "assets/google-podcast.svg"
+// import Spotify from "assets/spotify.svg"
+// import ApplePodcast from "assets/apple-podcast.svg"
+// import GooglePodcast from "assets/google-podcast.svg"
 
 export default ({ id }) => (
   <>
@@ -17,14 +17,14 @@ export default ({ id }) => (
       Home
     </Link>
     <Link
-      to="/blablas"
+      to="/videos"
       activeClassName="active"
       className="item"
       aria-label="View Blabla page"
     >
-      Blablas
+      Videos
     </Link>
-    <Link
+    {/* <Link
       to="/suggest-new-episode"
       activeClassName="active"
       className="item"
@@ -67,7 +67,7 @@ export default ({ id }) => (
         className="apple-podcast podcast-icon"
         alt="apple-podcast"
       />
-    </a>
+    </a> */}
     {/* <ToggleMode id={id} /> */}
     <ThemeToggle />
   </>

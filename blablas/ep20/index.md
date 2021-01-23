@@ -7,7 +7,7 @@ tags: ["freelance", "career"]
 category: "career"
 isNext: false
 featured: true
-video: "2458974807668203"
+video: "YALS9h3VBSU"
 published: true
 url:
 audio:

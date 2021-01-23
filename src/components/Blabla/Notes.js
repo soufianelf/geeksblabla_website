@@ -9,7 +9,7 @@ export default ({ content, repoLink }) => (
       <MDXProvider components={mdxComponents}>
         <MDXRenderer>{content}</MDXRenderer>
       </MDXProvider>
-      <div
+      {/* <div
         style={{
           display: "flex",
           alignItems: "flex-end",
@@ -26,7 +26,7 @@ export default ({ content, repoLink }) => (
         >
           Edit notes on GitHub
         </a>
-      </div>
+      </div> */}
     </React.Fragment>
   </div>
 )

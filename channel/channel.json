@@ -1,0 +1,11 @@
+{
+  "channelName": "GeeksBlaBla",
+  "header": "Hottest technology trends, In Darija!",
+  "subheader": "GeeksBlaBla is a community initiative, to discuss, highlight and share the latest IT topics in Moroccan Darija.",
+  "channelUrl": "https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA",
+  "logoImage": "https://raw.githubusercontent.com/DevC-Casa/geeksblabla.com/master/src/assets/logo.svg",
+  "heroImageLight": "https://raw.githubusercontent.com/DevC-Casa/geeksblabla.com/master/src/assets/hero_light.svg",
+  "heroImage": "https://raw.githubusercontent.com/DevC-Casa/geeksblabla.com/master/src/assets/hero.svg",
+  "heroImageMobile": "https://raw.githubusercontent.com/DevC-Casa/geeksblabla.com/master/src/assets/hero_mobile.svg",
+  "heroImageMobileLight": "https://raw.githubusercontent.com/DevC-Casa/geeksblabla.com/master/src/assets/hero_mobile_light.svg"
+}

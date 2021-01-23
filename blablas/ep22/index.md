@@ -6,7 +6,7 @@ title: "Junior Devs in Morocco"
 tags: ["school", "career", "dev"]
 category: "career"
 isNext: false
-video: "2632636916796968"
+video: "yCR-gU5io9s"
 published: true
 url:
 audio: https://d3ctxlq1ktw2nl.cloudfront.net/production/2019-11-8/37064067-48000-2-7061c427555f3.m4a

@@ -6,7 +6,7 @@ title: "MSS with Taher Alami"
 tags: ["MSS", "entrepreneurship", "career", "AR"]
 category: "MSS"
 isNext: false
-video: "2295207890711563"
+video: "1CHPLeWnL5M"
 published: true
 audio:
 url:

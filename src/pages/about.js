@@ -1,14 +1,14 @@
 import React from "react"
 
 import Layout from "components/Layout"
-import SEO from "components/SEO"
-import { Hero, Contributors, ContactUs } from "components/About"
+// import SEO from "components/SEO"
+// import { Hero, Contributors, ContactUs } from "components/About"
 
 export default () => (
   <Layout>
-    <SEO />
+    {/* <SEO />
     <Hero />
     <Contributors />
-    <ContactUs />
+    <ContactUs /> */}
   </Layout>
 )

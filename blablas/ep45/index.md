@@ -6,7 +6,7 @@ title: "Angular Deep Dive"
 tags: ["angular", "JS", "frontend", "web", "dev"]
 category: "dev"
 isNext: false
-video: "269321810941867"
+video: "49Sr9WuxSHM"
 published: true
 featured: false
 url: ""

@@ -1,4 +1,5 @@
-const config = require("./config/website")
+const fs = require("fs")
+let config = JSON.parse(fs.readFileSync("./channel/website.json", "utf-8"))
 const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix
 
 module.exports = {
@@ -7,13 +8,13 @@ module.exports = {
     title: config.siteTitle,
     twitterHandle: config.twitterHandle,
     description: config.siteDescription,
-    keywords: ["DevC_Casa", "Geeksblabla", "Podcast"],
+    keywords: config.keywords,
     canonicalUrl: config.siteUrl,
     image: config.siteLogo,
     banner: config.banner,
     author: {
       name: config.author,
-      minibio: `DevC Casablanca`,
+      minibio: config.minibio,
     },
     organization: {
       name: config.organization,
@@ -72,30 +73,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GeeksBlabla Website`,
-        short_name: `GeeksBlabla`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icons: [
-          {
-            src: "/android-chrome-192x192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/android-chrome-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-127901499-3",
+        name: config.name,
+        short_name: config.short_name,
+        start_url: config.start_url,
+        background_color: config.background_color,
+        theme_color: config.theme_color,
+        display: config.display,
+        icons: config.icons,
       },
     },
     {
@@ -150,18 +134,9 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "GeeksBlabla RSS Feed",
+            title: config.RSSTitle,
           },
         ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-sentry",
-      options: {
-        dsn: "https://7048bf611200421abd4d4f0e4d873c8b@sentry.io/1452547",
-        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-        environment: process.env.NODE_ENV,
-        enabled: (() => ["production"].indexOf(process.env.NODE_ENV) !== -1)(),
       },
     },
     {
@@ -178,7 +153,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: ["/thanks/"],
+        exclude: [],
       },
     },
   ],

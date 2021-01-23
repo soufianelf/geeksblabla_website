@@ -16,13 +16,7 @@ export const query = graphql`
           review
           role
           organization
-          avatar {
-            childImageSharp {
-              fixed(width: 200) {
-                src
-              }
-            }
-          }
+          avatar
         }
       }
     }
@@ -68,7 +62,7 @@ export default () => {
 
 const Review = ({ name, review, avatar, role, organization }) => (
   <div className="review">
-    <img src={avatar.childImageSharp.fixed.src} alt={`${name} avatar`} />
+    <img src={avatar} alt={`${name} avatar`} />
     <div className="back">
       <p className="text">{review}</p>
 

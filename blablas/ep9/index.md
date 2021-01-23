@@ -6,7 +6,7 @@ title: "UX, UI & design principles"
 tags: ["UX", "UI", "frontend", "web", "mobile dev"]
 category: "dev"
 isNext: false
-video: "2151207101778310"
+video: "Zp6CSoa1S4Y"
 published: true
 audio:
 ---

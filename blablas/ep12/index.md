@@ -6,7 +6,7 @@ title: "Devops"
 tags: ["devops"]
 category: "dev"
 isNext: false
-video: "2140582549507432"
+video: "_tizAkqvivM"
 published: true
 audio:
 ---

@@ -4,10 +4,10 @@ import Layout from "components/Layout"
 import {
   Hero,
   Statistics,
-  EpisodesTypes,
+  // EpisodesTypes,
   TopEpisodes,
   Reviews,
-  Notification,
+  // Notification,
 } from "components/Home"
 import SEO from "components/SEO"
 
@@ -17,10 +17,10 @@ const IndexPage = () => {
       <SEO />
       <Hero />
       <Statistics />
-      <EpisodesTypes />
+      {/* <EpisodesTypes /> */}
       <TopEpisodes />
       <Reviews />
-      <Notification />
+      {/* <Notification /> */}
     </Layout>
   )
 }
