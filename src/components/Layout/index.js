@@ -8,6 +8,6 @@ export default ({ children }) => (
   <ErrorBoundary>
     <Header />
     {children}
-    <Footer />
+    {/* <Footer /> */}
   </ErrorBoundary>
 )

@@ -16,11 +16,11 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <Hero />
-      <Statistics />
-      <EpisodesTypes />
-      <TopEpisodes />
-      <Reviews />
-      <Notification />
+      {/* <Statistics /> */}
+      {/* <EpisodesTypes /> */}
+      {/* <TopEpisodes /> */}
+      {/* <Reviews /> */}
+      {/* <Notification /> */}
     </Layout>
   )
 }
